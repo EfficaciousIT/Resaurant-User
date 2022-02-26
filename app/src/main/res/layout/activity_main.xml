@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <Switch
+                android:id="@+id/btnSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Offline"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="New Tasks"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recyclerView"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter"
+        android:text="Filter"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/secondary"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_baseline_filter_list_24"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/empty"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/delivery_bike"/>
+    <TextView
+        android:id="@+id/emptyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data not found.."
+        android:textColor="@color/primary"
+        android:layout_below="@id/empty"
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
